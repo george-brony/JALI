@@ -29,7 +29,8 @@ def functions_parser(code):
 
 def varibles_parser(code):
 	#initialization
-
+	if not "var " in code:
+		return -1 
 
 
 #run the programm
