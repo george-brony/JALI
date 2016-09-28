@@ -21,10 +21,10 @@ def functions_parser(code):
 
 	#code
 	if not "func " in code :
-		return None
+		return -1
 	start_index = code.find("func ")
 	if bracket_index = code.find("(") == -1:
-		return None
+		return -1
 	name = code[start_index + 5 : bracket_index - 1]
 
 def varibles_parser(code):
