@@ -1,6 +1,6 @@
 # Класс токена ("+", "name" и т.д.)
 
-INT, PLUS, MINUS, EOF = 'int', '+', '-', 'EOF'
+INT, PLUS, MINUS, IDENTIFIER, EOF = "int", "+", "-", "identifier", "EOF"
 
 class Token(object):
 	def __init__(self, type, value):
@@ -15,3 +15,9 @@ class Token(object):
 
 	def __repr__(self):
 		return self.__str__()
+
+	def getType(self):
+		return self.type
+
+	def getValue(self):
+		return self.value

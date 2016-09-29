@@ -1,14 +1,20 @@
 from Token import Token
 from Tokenizer import Tokenizer
+from Interpritator import Interpritator
 
 debug = True
-code = "+2"
 
 if debug:
 	print("Debug mode is on")
 
-tokenizer = Tokenizer(code)
+while(True):
+	try:
+		code = input(">>> ")
+	except EOFError:
+		break
 
-while tokenizer.hasNextToken():
-	token = tokenizer.nextToken()
-	print(token)
+	if not code:
+		continue
+
+	interpritator = Interpritator(Tokenizer(code))
+	interpritator.parse()
