@@ -1,7 +1,6 @@
 import Token
 from Tokenizer import Tokenizer
 
-
 class Interpritator:
 	def __init__(self, tokenizer):
 		self.tokenizer = tokenizer;
