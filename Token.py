@@ -1,4 +1,4 @@
-INT, PLUS, MINUS, IDENTIFIER, EOF = "int", "+", "-", "identifier", "EOF"
+INT, PLUS, MINUS, MULTIPLY, DIVIDE, IDENTIFIER, EOF = "int", "+", "-", "*", "/", "identifier", "EOF"
 
 class Token(object):
 	def __init__(self, type, value):

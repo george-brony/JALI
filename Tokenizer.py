@@ -5,7 +5,9 @@ tokenDatas = [
 	[ "^((-)?[0-9]+)", Token.INT ],
 	[ "^([a-zA-Z][a-zA-Z0-9]*)", Token.IDENTIFIER ],
 	[ "^(\\+)", Token.PLUS ],
-	[ "^(\\-)", Token.MINUS ]
+	[ "^(\\-)", Token.MINUS ],
+	[ "^(\\*)", Token.MULTIPLY ],
+	[ "^(\\\)", Token.DIVIDE ]
 ]
 
 class Tokenizer:
@@ -16,7 +18,7 @@ class Tokenizer:
 	def convert(self, type, value):
 		if type == Token.INT:
 			return int(value)
-		elif type == Token.PLUS or type == Token.MINUS or Token.IDENTIFIER:
+		else:
 			return value
 
 	def printError(self, error):
